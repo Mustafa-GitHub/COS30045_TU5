@@ -146,7 +146,7 @@ h1 {
 .state-line {
   fill: none;
   stroke-width: 1.6px;
-  opacity: 0.78;
+  opacity: 1;
 }
 
 .average-point {
@@ -177,6 +177,15 @@ h1 {
   border-top: 1px solid #dce6e0;
   color: #61736e;
   font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.page-footer p {
+  margin-bottom: 0.25rem;
+}
+
+.page-footer p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 600px) {
@@ -187,5 +196,29 @@ h1 {
 
   .chart-card {
     padding: 1.15rem;
+  }
+}
+
+@media (max-width: 420px) {
+  #scatter svg .tick text,
+  #bar svg .tick text,
+  #line svg .tick text {
+    font-size: 26px;
+  }
+
+  #scatter svg .axis-label,
+  #bar svg .axis-label,
+  #line svg .axis-label,
+  #bar svg .bar-value {
+    font-size: 22px;
+  }
+
+  #line svg .line-end-label {
+    font-size: 20px;
+  }
+
+  #donut svg .donut-label,
+  #donut svg .donut-center-label {
+    font-size: 16px;
   }
 }

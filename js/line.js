@@ -5,11 +5,11 @@ function drawLine(data) {
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
 	const series = [
-		{ key: "qld", label: "QLD", color: "#718992" },
-		{ key: "nsw", label: "NSW", color: "#a8795d" },
-		{ key: "vic", label: "VIC", color: "#718b79" },
-		{ key: "sa", label: "SA", color: "#927f9a" },
-		{ key: "tas", label: "TAS", color: "#a28f55" },
+		{ key: "qld", label: "QLD", color: "#155E75", dash: "8 3" },
+		{ key: "nsw", label: "NSW", color: "#984B2C", dash: "2 3" },
+		{ key: "vic", label: "VIC", color: "#3D6B4A", dash: "10 3 2 3" },
+		{ key: "sa", label: "SA", color: "#6B4C75", dash: "6 2 1 2" },
+		{ key: "tas", label: "TAS", color: "#756118", dash: "4 2" },
 		{ key: "average", label: "Average", color: "#18302d" }
 	];
 
@@ -32,7 +32,7 @@ function drawLine(data) {
 		const point = validRows[validRows.length - 1];
 		return point ? { item, point, pointY: y(point[item.key]) } : null;
 	}).filter(Boolean).sort((first, second) => first.pointY - second.pointY);
-	const labelGap = 19;
+	const labelGap = 29;
 	endpointLabels.forEach((endpoint, index) => {
 		endpoint.labelY = index === 0
 			? Math.max(8, endpoint.pointY)
@@ -67,6 +67,7 @@ function drawLine(data) {
 		.join("path")
 		.attr("class", "state-line")
 		.attr("stroke", item => item.color)
+		.attr("stroke-dasharray", item => item.dash)
 		.attr("d", item => lineFor(item)(data));
 	plot.append("path")
 		.datum(data)
@@ -93,7 +94,7 @@ function drawLine(data) {
 		.attr("x", innerWidth + 13)
 		.attr("y", endpoint => endpoint.labelY)
 		.attr("dy", "0.35em")
-		.attr("fill", endpoint => endpoint.item.color)
+		.style("fill", endpoint => endpoint.item.color)
 		.text(endpoint => endpoint.item.label);
 
 	plot.append("text")
