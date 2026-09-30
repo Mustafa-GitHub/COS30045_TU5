@@ -100,6 +100,27 @@ h1 {
   height: auto;
 }
 
+.tech-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  color: #526762;
+  font-size: 0.82rem;
+}
+
+.tech-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tech-legend__swatch {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex: 0 0 auto;
+  border-radius: 2px;
+}
+
 .page-footer {
   margin-top: 1.75rem;
   padding-top: 1rem;
