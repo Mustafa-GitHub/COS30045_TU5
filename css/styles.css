@@ -137,6 +137,24 @@ h1 {
   font-weight: 600;
 }
 
+.average-line {
+  fill: none;
+  stroke: #39776a;
+  stroke-width: 2.5px;
+}
+
+.average-point {
+  fill: #39776a;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.line-end-label {
+  fill: #18302d;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .page-footer {
   margin-top: 1.75rem;
   padding-top: 1rem;
