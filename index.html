@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Explore television energy use, screen technologies, and electricity prices in Australia.">
+		<title>How much power do our TVs use?</title>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<main class="page-shell">
+			<header class="page-header">
+				<p class="eyebrow">Australian television energy use</p>
+				<h1>How much power do our TVs use?</h1>
+				<p class="intro">Explore the energy use of TVs sold in Australia, compare screen technologies, and see how electricity prices shape the cost of watching.</p>
+			</header>
+
+			<section class="dashboard" aria-label="Television energy visualisations">
+				<article class="chart-card">
+					<h2>Screen size and energy use</h2>
+					<p class="caption">Compare annual energy use across television screen sizes.</p>
+					<div class="chart" id="scatter" aria-label="Scatter plot of screen size and energy use"></div>
+				</article>
+
+				<article class="chart-card">
+					<h2>Share by screen technology</h2>
+					<p class="caption">See how the available models are split across technologies.</p>
+					<div class="chart" id="donut" aria-label="Donut chart of screen technology share"></div>
+				</article>
+
+				<article class="chart-card">
+					<h2>Energy use by technology</h2>
+					<p class="caption">Compare energy use across screen types and sizes.</p>
+					<div class="chart" id="bar" aria-label="Bar chart of energy use by technology"></div>
+				</article>
+
+				<article class="chart-card">
+					<h2>Electricity prices over time</h2>
+					<p class="caption">Follow changes in Australian Energy Retailer spot prices.</p>
+					<div class="chart" id="line" aria-label="Line chart of electricity spot prices"></div>
+				</article>
+			</section>
+
+			<footer class="page-footer">Data source: Australian Government Energy Rating data (data.gov.au)</footer>
+		</main>
+
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		<script src="js/shared.js"></script>
+		<script src="js/scatter.js"></script>
+		<script src="js/donut.js"></script>
+		<script src="js/bar.js"></script>
+		<script src="js/line.js"></script>
+	</body>
+</html>
