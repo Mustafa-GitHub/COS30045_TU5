@@ -139,20 +139,36 @@ h1 {
 
 .average-line {
   fill: none;
-  stroke: #39776a;
-  stroke-width: 2.5px;
+  stroke: #18302d;
+  stroke-width: 3.25px;
+}
+
+.state-line {
+  fill: none;
+  stroke-width: 1.6px;
+  opacity: 0.78;
 }
 
 .average-point {
-  fill: #39776a;
+  fill: #18302d;
   stroke: #fff;
   stroke-width: 1.5px;
+}
+
+.line-label-leader {
+  fill: none;
+  stroke-width: 0.8px;
+  opacity: 0.75;
 }
 
 .line-end-label {
   fill: #18302d;
   font-size: 0.78rem;
   font-weight: 700;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-width: 3px;
 }
 
 .page-footer {
